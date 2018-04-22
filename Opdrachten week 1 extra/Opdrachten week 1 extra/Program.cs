@@ -12,18 +12,46 @@ namespace Opdrachten_week_1_extra
         {
             // maak YahtzeeGame (struct) aan
             YahtzeeGame yahtzeeGame = new YahtzeeGame();
-            // probeer yahtzee te gooien
-            int aantalPogingen = 0;
-            do
+
+            while (true)
             {
-                // gooi alle dobbelstenen
-                yahtzeeGame.Gooi();
-                aantalPogingen++;
-            } while (!yahtzeeGame.Yahtzee());
-            // vermeld aantal pogingen voor yahtzee
-            Console.WriteLine("Aantal pogingen nodig: {0}", aantalPogingen);
-            // wacht op gebruiker
-            Console.ReadKey();
+                Console.WriteLine("1. Yahtzee\n2. Three Of A Kind\n3. Four Of A Kind\n4. Full House\n5. Kleine Staat \n6. Grote Straat");
+
+                string keuze = Console.ReadLine();
+                int aantalPogingen = 0;
+
+                switch (keuze)
+                {
+                    case "1":
+                        do
+                        {
+                            yahtzeeGame.Gooi();
+                            aantalPogingen++;
+                        } while (!yahtzeeGame.Yahtzee());
+                        Console.WriteLine("Aantal pogingen nodig: {0}", aantalPogingen);
+                        break;
+                    case "2":
+                        do
+                        {
+                            yahtzeeGame.Gooi();
+                            aantalPogingen++;
+                        } while (!yahtzeeGame.ThreeOfAKind());
+                        Console.WriteLine("Aantal pogingen nodig: {0}", aantalPogingen);
+                        break;
+                    case "3":
+                        do
+                        {
+                            yahtzeeGame.Gooi();
+                            aantalPogingen++;
+                        } while (!yahtzeeGame.FourOfAKind());
+                        Console.WriteLine("Aantal pogingen nodig: {0}", aantalPogingen);
+                        break;
+                }
+
+
+
+                Console.ReadKey();
+            }
         }
     }
 }

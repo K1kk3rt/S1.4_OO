@@ -27,7 +27,7 @@ namespace Opdrachten_week_1_extra
                         {
                             yahtzeeGame.Gooi();
                             aantalPogingen++;
-                        } while (!yahtzeeGame.Yahtzee());
+                        } while (!yahtzeeGame.XOfAKind(yahtzeeGame.CalcX(5)));
                         Console.WriteLine("Aantal pogingen nodig: {0}", aantalPogingen);
                         break;
                     case "2":
@@ -35,7 +35,7 @@ namespace Opdrachten_week_1_extra
                         {
                             yahtzeeGame.Gooi();
                             aantalPogingen++;
-                        } while (!yahtzeeGame.ThreeOfAKind());
+                        } while (!yahtzeeGame.XOfAKind(yahtzeeGame.CalcX(3)));
                         Console.WriteLine("Aantal pogingen nodig: {0}", aantalPogingen);
                         break;
                     case "3":
@@ -43,7 +43,31 @@ namespace Opdrachten_week_1_extra
                         {
                             yahtzeeGame.Gooi();
                             aantalPogingen++;
-                        } while (!yahtzeeGame.FourOfAKind());
+                        } while (!yahtzeeGame.XOfAKind(yahtzeeGame.CalcX(4)));
+                        Console.WriteLine("Aantal pogingen nodig: {0}", aantalPogingen);
+                        break;
+                    case "4":
+                        do
+                        {
+                            yahtzeeGame.Gooi();
+                            aantalPogingen++;
+                        } while (!yahtzeeGame.FullHouse());
+                        Console.WriteLine("Aantal pogingen nodig: {0}", aantalPogingen);
+                        break;
+                    case "5":
+                        do
+                        {
+                            yahtzeeGame.Gooi();
+                            aantalPogingen++;
+                        } while (!yahtzeeGame.Straight(false));
+                        Console.WriteLine("Aantal pogingen nodig: {0}", aantalPogingen);
+                        break;
+                    case "6":
+                        do
+                        {
+                            yahtzeeGame.Gooi();
+                            aantalPogingen++;
+                        } while (!yahtzeeGame.Straight(true));
                         Console.WriteLine("Aantal pogingen nodig: {0}", aantalPogingen);
                         break;
                 }

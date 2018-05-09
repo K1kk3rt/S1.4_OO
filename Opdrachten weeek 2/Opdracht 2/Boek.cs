@@ -28,12 +28,61 @@ namespace Opdracht_2
             voorraad = 0;
         }
 
-        public void Print(Boekhandel boekhandel)
+        //Methods
+        public virtual void Print()
         {
-            for(int i = 0; i < boekhandel.bladen.Capacity; i++) 
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("{0}, {1}, {2}", titel, prijs, voorraad);
+        }
+
+        public void WijzigVoorraad(Boek boek, Boekhandel boekhandel)
+        {
+            bool boekgevonden = false;
+
+            foreach (Boek item in boekhandel.bladen)
             {
-                Console.WriteLine("{0}, {1}, {2}", boekhandel.bladen);
+                if (item.titel == boek.titel)
+                {
+                    item.voorraad = boek.voorraad;
+                    boekgevonden = true;
+                }
             }
+            if (boekgevonden)
+            {
+                Console.WriteLine("De voorraad van {0} is gewijzigd naar {1}", boek.titel, boek.voorraad);
+            }
+            else
+            {
+                Console.WriteLine("Boek niet gevonden");
+            }
+        }
+    }
+
+    class Weekblad : Boek
+    {
+        //fields
+        public string dagVanUitgifte;
+
+        //Constructor
+        public Weekblad (string titel, double prijs, int voorraad, string dagVanUitgifte) : base(titel, prijs, voorraad)
+        {
+            this.dagVanUitgifte = dagVanUitgifte;
+        }
+
+        //Default constructor
+        public Weekblad()
+        {
+            titel = "";
+            prijs = 0;
+            voorraad = 0;
+            dagVanUitgifte = "";
+        }
+
+        //Methods
+        public override void Print()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("{0}, {1}, {2}, {3}", titel, prijs, voorraad, dagVanUitgifte);
         }
     }
 }

@@ -15,17 +15,16 @@ namespace Opdracht_1
             Console.WriteLine("struct persoon: " + p1.naam + ", " + p1.leeftijd);
             Console.WriteLine("class persoon: " + p2.naam + ", " + p2.leeftijd);
             Console.WriteLine();
-            WijzigLeeftijd(p1);
+            WijzigLeeftijd(ref p1);
             WijzigLeeftijd(p2);
             Console.WriteLine("struct persoon: " + p1.naam + ", " + p1.leeftijd);
             Console.WriteLine("class persoon: " + p2.naam + ", " + p2.leeftijd);
             Console.WriteLine();
             Console.ReadKey();
         }
-        static void WijzigLeeftijd(PersoonStruct p)
+        static void WijzigLeeftijd(ref PersoonStruct p)
         {
-            //Verschil struct vs class
-
+            //Verschil struct vs class is ref!!
 
             p.leeftijd++;
         }

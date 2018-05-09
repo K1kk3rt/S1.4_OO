@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opdracht 1", "Opdracht 1\Op
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opdracht 2", "Opdracht 2\Opdracht 2.csproj", "{C1F743BF-A9D0-4F8F-9B23-BFDE683B09FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opdracht 3", "KaartSpel\Opdracht 3.csproj", "{71758986-B1D6-4802-A8BE-310D908CE8AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C1F743BF-A9D0-4F8F-9B23-BFDE683B09FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1F743BF-A9D0-4F8F-9B23-BFDE683B09FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1F743BF-A9D0-4F8F-9B23-BFDE683B09FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71758986-B1D6-4802-A8BE-310D908CE8AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71758986-B1D6-4802-A8BE-310D908CE8AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71758986-B1D6-4802-A8BE-310D908CE8AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71758986-B1D6-4802-A8BE-310D908CE8AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

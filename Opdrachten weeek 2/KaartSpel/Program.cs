@@ -13,6 +13,7 @@ namespace Opdracht_3
             KaartSpel spel = new KaartSpel(2);
             spel.Print();
             Console.ReadKey();
-        }
+        }
+
     }
 }
